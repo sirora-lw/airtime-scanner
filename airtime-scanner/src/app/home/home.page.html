@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Airtime Scanner</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button expand="block" (click)="captureImage()">Scan Recharge Card</ion-button>
+
+  <div *ngIf="pin" style="margin-top: 20px;">
+    <p><strong>Extracted PIN:</strong> {{ pin }}</p>
+    <ion-input [(ngModel)]="pin" placeholder="Edit PIN if needed"></ion-input>
+    <ion-button expand="block" color="success" (click)="dialUssd()" style="margin-top: 10px;">
+      Recharge
+    </ion-button>
+  </div>
+
+  <ion-loading [isOpen]="loading" message="Processing OCR..."></ion-loading>
+</ion-content>
