@@ -2,7 +2,8 @@
   "name": "airtime-scanner",
   "version": "0.0.1",
   "scripts": {
-    "start": "ionic serve"
+    "start": "ionic serve",
+    "build": "ng build" 
   },
   "dependencies": {
     "@angular/common": "~15.0.0",
